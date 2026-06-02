@@ -1120,7 +1120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .close-modal-btn {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     width: 40px;
@@ -1135,7 +1135,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
+    z-index: 1300;
 }
 
 .close-modal-btn:hover {
@@ -1594,6 +1594,12 @@ h1, h2, h3, h4, h5, h6 {
     
     .filter-pills-scroll {
         padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .lightbox-modal {
@@ -1608,7 +1614,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .lightbox-media-pane {
-        height: 300px;
+        height: 50vh;
+        min-height: 350px;
     }
     
     .lightbox-details-pane {
@@ -1642,9 +1649,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 24px;
     }
     
-    .lightbox-media-pane {
-        height: 240px;
-    }
+
     
     .lightbox-details-pane {
         padding: 20px;
@@ -1742,8 +1747,6 @@ h1, h2, h3, h4, h5, h6 {
             </div>
         </footer>
     </div>
-
-
 
     <!-- Glassmorphic Lightbox Modal -->
     <div class="modal-overlay" id="lightbox-overlay">
